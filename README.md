@@ -1,0 +1,1 @@
+PL De-Duplication System: An automated web-based solution designed to clean and manage price list data by removing duplicate entries. The system supports multiple file formats, provides analytics and history tracking, and improves overall data quality while reducing manual effort.
