@@ -13,7 +13,7 @@ import Upload from './pages/Upload';
 import History from './pages/History';
 import HistoryDetail from './pages/HistoryDetail';
 import Analytics from './pages/Analytics';
-import Profile from './pages/Profile';  // Make sure this is the only Profile component
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -55,13 +55,14 @@ function App() {
               <Layout />
             </PrivateRoute>
           }>
-            <Route index element={<Navigate to="/dashboard" replace />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            {/* Changed: Dashboard is now the index/landing page */}
+            <Route index element={<Dashboard />} />
+            <Route path="dashboard" element={<Navigate to="/" replace />} />
             <Route path="upload" element={<Upload />} />
             <Route path="history" element={<History />} />
             <Route path="history/:id" element={<HistoryDetail />} />
             <Route path="analytics" element={<Analytics />} />
-            <Route path="profile" element={<Profile />} />  {/* Only one profile route */}
+            <Route path="profile" element={<Profile />} />
           </Route>
           
           {/* 404 route */}
